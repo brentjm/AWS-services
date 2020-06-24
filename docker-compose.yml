@@ -1,0 +1,26 @@
+version: '3.5'
+services:
+
+  aws:
+    build: ./aws
+    image: aws-mqtt
+    container_name: aws-mqtt
+    volumes:
+      - type: bind
+        source: ./aws/private_info
+        target: /home/aws/python/private_info
+    networks:
+      - aws      
+    ports:
+      - "1883:1884"
+    restart: unless-stopped
+
+volumes:
+  aws-data:
+
+networks:
+  aws:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.19.1.1/27
