@@ -8,9 +8,12 @@ services:
     volumes:
       - type: bind
         source: ./aws/private_info
-        target: /home/aws/python/private_info
+        target: /home/aws/private_info
+      - type: bind
+        source: ./aws/python
+        target: /home/aws/python
     networks:
-      - aws      
+      - aws
     ports:
       - "1883:1884"
     restart: unless-stopped

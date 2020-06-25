@@ -1,0 +1,8 @@
+{
+    "client_id": "chiller01",
+    "host": "a1aahan4trch4b-ats.iot.us-east-1.amazonaws.com",
+    "port": 8883,
+    "root_CA_path": "/home/aws/private_info/root-CA.crt",
+    "private_key_path": "/home/aws/private_info/mqtt.private.key",
+    "cert_path": "/home/aws/private_info/mqtt.cert.pem"
+}
