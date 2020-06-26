@@ -15,7 +15,7 @@ services:
     networks:
       - aws
     ports:
-      - "1883:1884"
+      - "50007:50007"
     restart: unless-stopped
 
 volumes:
