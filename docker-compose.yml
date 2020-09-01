@@ -2,7 +2,9 @@ version: '3.5'
 services:
 
   aws:
-    build: ./aws
+    build:
+      context: .
+      dockerfile:  ./socket-mqtt
     image: aws-mqtt
     container_name: aws-mqtt
     volumes:
